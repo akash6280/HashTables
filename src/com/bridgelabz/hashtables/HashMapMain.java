@@ -16,8 +16,11 @@ public class HashMapMain {
 			}
 			hashMap.add(word, value);
 		}
-		int frequency = hashMap.get("paranoid");
+		int frequency = hashMap.get("avoidable");
 		System.out.println(frequency);
+		
+		hashMap.remove("avoidable");
+		
 	}
 
 }
