@@ -45,4 +45,12 @@ public class HashMap<K,V> {
 			mapNode.setValue(value);
 		}
 	}
+	
+	public void remove(K key) {
+		int index = this.getBucketIndex(key);
+		LinkedList<K> linkedList = bucketArray.get(index);
+		if(linkedList != null) {
+			linkedList.deleteNode(key);
+		}
+	}
 }
